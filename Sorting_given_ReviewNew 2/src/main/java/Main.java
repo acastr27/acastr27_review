@@ -21,11 +21,6 @@ final class Main {
 		String choice;
 		
 		if (args.length == 0) {
-			accStr = "20";
-			choice = "1";
-			
-		}
-		else{
 			
 			System.out.println("Enter your string of numbers or just one number:");
 			accStr = br.readLine();
@@ -39,6 +34,10 @@ final class Main {
 			System.out.println("Enter selected algorithm code :");
 			choice = br.readLine();
 			
+		}
+		else {
+			accStr = "20";
+			choice = "1";
 		}
 		SortDemoData data = new SortDemoData();
 		
