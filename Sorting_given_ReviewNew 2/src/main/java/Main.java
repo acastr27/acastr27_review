@@ -21,11 +21,6 @@ final class Main {
 		String choice;
 		
 		if (args.length == 0) {
-			accStr = "20";
-			choice = "1";
-			
-		}
-		else{
 			
 			System.out.println("Enter your string of numbers or just one number:");
 			accStr = br.readLine();
@@ -40,6 +35,10 @@ final class Main {
 			choice = br.readLine();
 			
 		}
+		else {
+			accStr = "20";
+			choice = "1";
+		}
 		SortDemoData data = new SortDemoData();
 		
 		try {
@@ -53,11 +52,14 @@ final class Main {
 			System.out.println("Result: ");
 			System.out.println(outputBuf.toString());
 		
-		 } catch (NoSuchElementException e) {
+		 } 
+		catch (NoSuchElementException e) {
 			 System.out.println("Not enough numbers.");
-	     } catch (NumberFormatException e) {
+	     } 
+		catch (NumberFormatException e) {
 	    	 System.out.println("Please only use integer values. ");
-	     } catch (NegativeArraySizeException e) {
+	     } 
+		catch (NegativeArraySizeException e) {
 	    	 System.out.println("Negative Array Size.");
 	     }  
 		
